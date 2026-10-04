@@ -32,6 +32,11 @@ public:
         children_.push_back(child);
     }
 
+    // Removes all children (used by the Spark binding layer for text updates).
+    void clear_children() {
+        children_.clear();
+    }
+
     virtual std::string debug_string(int depth = 0) const = 0;
 
 protected:
